@@ -94,7 +94,7 @@ const Login = () => {
             <PersonIcon sx={{ fontSize: 40 }} />
           </Avatar>
           <Typography variant="h4" component="h1" gutterBottom>
-            {t('login.title')}
+            {t('login')}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {t('login.subtitle')}
@@ -110,7 +110,7 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <TextField
             fullWidth
-            label={t('login.email')}
+            label={t('email')}
             name="email"
             type="email"
             value={formData.email}
@@ -125,7 +125,7 @@ const Login = () => {
 
           <TextField
             fullWidth
-            label={t('login.password')}
+            label={t('password')}
             name="password"
             type="password"
             value={formData.password}
@@ -146,14 +146,14 @@ const Login = () => {
             disabled={loading}
             sx={{ mb: 2 }}
           >
-            {loading ? <CircularProgress size={24} /> : t('login.login')}
+            {loading ? <CircularProgress size={24} /> : t('login')}
           </Button>
 
           <Box sx={{ textAlign: 'center' }}>
             <Typography variant="body2" color="text.secondary">
-              {t('login.noAccount')}{' '}
+              {t('noAccount')}{' '}
               <Link component={RouterLink} to="/register" underline="hover">
-                {t('login.register')}
+                {t('register')}
               </Link>
             </Typography>
           </Box>

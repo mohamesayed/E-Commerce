@@ -17,7 +17,7 @@ const Footer = () => {
       <Toolbar>
         <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
           <Typography variant="body2" color="inherit">
-            © 2024 {t('home.hero.title')}. {t('about.title')}
+            © 2025 {t('home.hero.title')}. {t('about.title')}
           </Typography>
           <Box sx={{ mt: 1 }}>
             <Link component={RouterLink} to="/about" color="inherit" sx={{ mx: 1 }}>

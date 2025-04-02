@@ -284,7 +284,7 @@ const Navbar = () => {
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
-              <ListItemText primary={t('signup')} />
+              <ListItemText primary={t('register')} />
             </ListItem>
           </>
         )}
@@ -366,7 +366,7 @@ const Navbar = () => {
                 >
                   <MenuItem onClick={handleProfileClick}>
                     <PersonIcon sx={{ mr: 1 }} />
-                    {t('profile')}
+                    {t('profile.title')}
                   </MenuItem>
                   <MenuItem onClick={handleLogout}>
                     <LogoutIcon sx={{ mr: 1 }} />
@@ -389,7 +389,7 @@ const Navbar = () => {
                   onClick={() => navigate('/register')}
                   sx={{ display: { xs: 'none', sm: 'block' } }}
                 >
-                  {t('signup')}
+                  {t('register')}
                 </Button>
               </Box>
             )}

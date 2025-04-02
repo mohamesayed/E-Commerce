@@ -15,18 +15,18 @@ const OrderSuccess = () => {
       <Box sx={{ py: 8, textAlign: 'center' }}>
         <CheckCircleIcon sx={{ fontSize: 80, color: 'success.main', mb: 3 }} />
         <Typography variant="h4" component="h1" gutterBottom>
-          {t('orderSuccess.title')}
+          {t('orderSuccess')}
         </Typography>
         <Typography variant="body1" color="text.secondary" paragraph>
-          {t('orderSuccess.message')}
+          {t('message')}
         </Typography>
 
         <Paper sx={{ p: 4, mt: 4 }}>
           <Typography variant="h6" gutterBottom>
-            {t('orderSuccess.nextSteps')}
+            {t('nextSteps')}
           </Typography>
           <Typography variant="body2" color="text.secondary" paragraph>
-            {t('orderSuccess.nextStepsMessage')}
+            {t('nextStepsMessage')}
           </Typography>
         </Paper>
 
@@ -36,14 +36,14 @@ const OrderSuccess = () => {
             startIcon={<ShoppingBagIcon />}
             onClick={() => navigate('/products')}
           >
-            {t('orderSuccess.continueShopping')}
+            {t('continueShopping')}
           </Button>
           <Button
             variant="outlined"
             startIcon={<PersonIcon />}
             onClick={() => navigate('/profile')}
           >
-            {t('orderSuccess.viewOrders')}
+            {t('viewOrders')}
           </Button>
         </Box>
       </Box>

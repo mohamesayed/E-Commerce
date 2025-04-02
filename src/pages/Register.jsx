@@ -113,7 +113,7 @@ const Register = () => {
       <Paper elevation={3} sx={{ p: 4 }}>
         <Box sx={{ textAlign: 'center', mb: 4 }}>
           <Typography variant="h4" component="h1" gutterBottom>
-            {t('register.title')}
+            {t('register')}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {t('register.subtitle')}
@@ -131,7 +131,7 @@ const Register = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label={t('register.name')}
+                label={t('fullName')}
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
@@ -145,7 +145,7 @@ const Register = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label={t('register.email')}
+                label={t('email')}
                 name="email"
                 type="email"
                 value={formData.email}
@@ -160,7 +160,7 @@ const Register = () => {
             <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
-                label={t('register.password')}
+                label={t('password')}
                 name="password"
                 type="password"
                 value={formData.password}
@@ -175,7 +175,7 @@ const Register = () => {
             <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
-                label={t('register.confirmPassword')}
+                label={t('confirmPassword')}
                 name="confirmPassword"
                 type="password"
                 value={formData.confirmPassword}
@@ -190,7 +190,7 @@ const Register = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label={t('register.phone')}
+                label={t('phone')}
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
@@ -204,7 +204,7 @@ const Register = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label={t('register.address')}
+                label={t('address')}
                 name="address"
                 value={formData.address}
                 onChange={handleInputChange}
@@ -227,14 +227,14 @@ const Register = () => {
             disabled={loading}
             sx={{ mt: 3, mb: 2 }}
           >
-            {loading ? <CircularProgress size={24} /> : t('register.register')}
+            {loading ? <CircularProgress size={24} /> : t('register')}
           </Button>
 
           <Box sx={{ textAlign: 'center' }}>
             <Typography variant="body2" color="text.secondary">
-              {t('register.haveAccount')}{' '}
+              {t('haveAccount')}{' '}
               <Link component={RouterLink} to="/login" underline="hover">
-                {t('register.login')}
+                {t('login')}
               </Link>
             </Typography>
           </Box>

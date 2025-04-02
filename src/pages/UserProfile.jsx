@@ -54,17 +54,23 @@ const UserProfile = () => {
     <Container maxWidth="md" sx={{ py: 4 }}>
       <Paper elevation={3} sx={{ p: 4 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
-          <Typography variant="h4" component="h1">
-            {t('profileTitle')}
+          <Typography variant="h4" component="h1" gutterBottom>
+            {t('profile')}
           </Typography>
           <Button
+            variant="outlined"
+            startIcon={<EditIcon />}
+            onClick={() => setIsEditing(true)}
+          >
+            {t('edit')}
+          </Button>
+          <Button
             variant="contained"
-            color={isEditing ? 'success' : 'primary'}
-            startIcon={isEditing ? <SaveIcon /> : <EditIcon />}
-            onClick={() => isEditing ? handleSave() : setIsEditing(true)}
+            startIcon={<SaveIcon />}
+            onClick={handleSave}
             disabled={loading}
           >
-            {isEditing ? t('save') : t('edit')}
+            {loading ? t('loading') : t('save')}
           </Button>
         </Box>
 
@@ -100,14 +106,12 @@ const UserProfile = () => {
                 <Grid item xs={12}>
                   <TextField
                     fullWidth
-                    label={t('name')}
+                    label={t('fullName')}
                     name="name"
                     value={userData.name}
                     onChange={handleInputChange}
                     disabled={!isEditing}
-                    InputProps={{
-                      startAdornment: <PersonIcon sx={{ mr: 1, color: 'text.secondary' }} />,
-                    }}
+                    required
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -118,9 +122,7 @@ const UserProfile = () => {
                     value={userData.email}
                     onChange={handleInputChange}
                     disabled={!isEditing}
-                    InputProps={{
-                      startAdornment: <EmailIcon sx={{ mr: 1, color: 'text.secondary' }} />,
-                    }}
+                    required
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -131,9 +133,7 @@ const UserProfile = () => {
                     value={userData.phone}
                     onChange={handleInputChange}
                     disabled={!isEditing}
-                    InputProps={{
-                      startAdornment: <PhoneIcon sx={{ mr: 1, color: 'text.secondary' }} />,
-                    }}
+                    required
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -145,10 +145,8 @@ const UserProfile = () => {
                     onChange={handleInputChange}
                     disabled={!isEditing}
                     multiline
-                    rows={2}
-                    InputProps={{
-                      startAdornment: <LocationOnIcon sx={{ mr: 1, color: 'text.secondary' }} />,
-                    }}
+                    rows={3}
+                    required
                   />
                 </Grid>
               </Grid>
