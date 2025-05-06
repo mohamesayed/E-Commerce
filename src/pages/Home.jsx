@@ -129,7 +129,7 @@ const Home = () => {
               size="large"
               startIcon={<ShoppingCartIcon />}
               sx={{ 
-                mr: 2,
+                m: 2,
                 '&:hover': {
                   transform: 'scale(1.05)',
                   transition: 'transform 0.2s ease-in-out',
@@ -148,6 +148,7 @@ const Home = () => {
                 '&:hover': {
                   transform: 'scale(1.05)',
                   transition: 'transform 0.2s ease-in-out',
+                  
                 }
               }}
             >
